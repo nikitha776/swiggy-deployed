@@ -10,7 +10,7 @@ const useRestaurantMenu = (resId) => {
    },[]);
 
   const fetchMenu = async () => {
-    const data = await fetch(`http://localhost:5000/api/menu/${resId}`);
+    const data = await fetch(`https://food-matrix-backend.onrender.com/api/menu/${resId}`);
     const json = await data.json();
     console.log(resInfo);
     setResInfo(json);
