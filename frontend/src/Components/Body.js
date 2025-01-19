@@ -18,7 +18,7 @@ const Body = () => {
   },[]);
 
   const fetchData = async () => {
-    const data = await fetch("http://localhost:5000/api/restaurant");
+    const data = await fetch("https://food-matrix-backend.onrender.com/api/restaurant");
     const json = await data.json();
     setList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     setFilteredList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
